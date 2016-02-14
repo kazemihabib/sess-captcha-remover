@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "sess captcha remover",
+    "description": "remove sess captcha",
+    "version": "1.0",
+    "background": {
+        "scripts": [
+            "eventpage.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [{
+        "matches": [
+            "http://sess.shirazu.ac.ir/sess/Script/Login.aspx"
+        ],
+        "js": [
+            "sess.js"
+        ],
+        "run_at": "document_end"
+    }],
+    "permissions": [
+        "cookies",
+        "https://sess.shirazu.ac.ir/"
+    ]
+}
